@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - Cabify</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Cabify</h1>
+            <nav>
+                <span id="userEmail"></span>
+                <button id="logoutBtn">Logout</button>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="payment-container">
+            <h2>Complete Your Payment</h2>
+            
+            <div class="fare-summary">
+                <h3>Fare Summary</h3>
+                <div class="summary-item">
+                    <span>Base Fare</span>
+                    <span id="baseFare">₹50</span>
+                </div>
+                <div class="summary-item">
+                    <span>Distance Fare</span>
+                    <span id="distanceFare">₹150</span>
+                </div>
+                <div class="summary-item total">
+                    <span>Total Amount</span>
+                    <span id="totalFare">₹200</span>
+                </div>
+            </div>
+            
+            <form id="paymentForm">
+                <div class="payment-methods">
+                    <h3>Payment Method</h3>
+                    <div class="method-option">
+                        <input type="radio" id="creditCard" name="paymentMethod" value="creditCard" checked>
+                        <label for="creditCard">Credit/Debit Card</label>
+                    </div>
+                    <div class="method-option">
+                        <input type="radio" id="upi" name="paymentMethod" value="upi">
+                        <label for="upi">UPI</label>
+                    </div>
+                    <div class="method-option">
+                        <input type="radio" id="wallet" name="paymentMethod" value="wallet">
+                        <label for="wallet">Wallet</label>
+                    </div>
+                    <div class="method-option">
+                        <input type="radio" id="cash" name="paymentMethod" value="cash">
+                        <label for="cash">Cash</label>
+                    </div>
+                </div>
+                
+                <div id="creditCardDetails" class="payment-details">
+                    <div class="form-group">
+                        <label for="cardNumber">Card Number</label>
+                        <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456">
+                    </div>
+                    <div class="form-group">
+                        <label for="cardName">Cardholder Name</label>
+                        <input type="text" id="cardName" placeholder="John Doe">
+                    </div>
+                    <div class="form-group-row">
+                        <div class="form-group">
+                            <label for="expiryDate">Expiry Date</label>
+                            <input type="text" id="expiryDate" placeholder="MM/YY">
+                        </div>
+                        <div class="form-group">
+                            <label for="cvv">CVV</label>
+                            <input type="text" id="cvv" placeholder="123">
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="upiDetails" class="payment-details" style="display: none;">
+                    <div class="form-group">
+                        <label for="upiId">UPI ID</label>
+                        <input type="text" id="upiId" placeholder="yourname@upi">
+                    </div>
+                </div>
+                
+                <div id="walletDetails" class="payment-details" style="display: none;">
+                    <div class="form-group">
+                        <label for="walletType">Select Wallet</label>
+                        <select id="walletType">
+                            <option value="paytm">Paytm</option>
+                            <option value="phonepe">PhonePe</option>
+                            <option value="amazonpay">Amazon Pay</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn">Pay Now</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="auth.js"></script>
+    <script src="payment.js"></script>
+</body>
+</html>

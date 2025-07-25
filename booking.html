@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Cab - Cabify</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Chatbot Widget -->
+<div class="chatbot-container">
+    <div class="chatbot-header">
+      <h3>Cabify Assistant</h3>
+      <button class="close-chatbot"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="chatbot-messages">
+      <!-- Messages will appear here -->
+    </div>
+    <div class="chatbot-input">
+      <input type="text" placeholder="Ask me anything about bookings..." id="chatbot-input-field">
+      <button id="send-message"><i class="fas fa-paper-plane"></i></button>
+    </div>
+  </div>
+  <button class="chatbot-toggle">
+    <i class="fas fa-robot"></i>
+    <span>Need help?</span>
+  </button>
+  <!-- ssssssssssssssss -->
+    <header>
+        <div class="container">
+            <h1>Cabify</h1>
+            <nav>
+                <span id="userEmail"></span>
+                <button id="logoutBtn">Logout</button>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="booking-container">
+            <h2>Book Your Ride</h2>
+            
+            <form id="bookingForm">
+                <div class="form-group">
+                    <label for="pickupLocation">Pickup Location</label>
+                    <input type="text" id="pickupLocation" placeholder="Enter pickup address" required>
+                </div>
+                <div class="form-group">
+                    <label for="dropoffLocation">Dropoff Location</label>
+                    <input type="text" id="dropoffLocation" placeholder="Enter destination address" required>
+                </div>
+                <div class="form-group">
+                    <label for="cabType">Cab Type</label>
+                    <select id="cabType" required>
+                        <option value="">Select cab type</option>
+                        <option value="mini">Mini (₹10/km)</option>
+                        <option value="sedan">Sedan (₹15/km)</option>
+                        <option value="suv">SUV (₹20/km)</option>
+                        <option value="luxury">Luxury (₹30/km)</option>
+                    </select>
+                </div>
+                
+                <div id="map" style="height: 300px; margin: 20px 0; border-radius: 8px;"></div>
+                
+                <button type="submit" class="btn">Confirm Booking</button>
+            </form>
+        </div>
+    </div>
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAofGOws5bBgK3K42O6sSye65AHbOzjoZ8&libraries=places&callback=initMap" async defer></script> -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBS1HL6o5JdFaRteA_d92neDJAC-G6NcpE&libraries=places,geometry&callback=initMap" async defer></script>
+    <script src="auth.js"></script>
+    <script src="booking.js"></script>
+    <script src="chatbot.js"></script>
+</body>
+</html>
