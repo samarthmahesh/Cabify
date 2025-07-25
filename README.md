@@ -22,7 +22,13 @@ Here’s how the project files are organized:
 <img width="654" height="319" alt="image" src="https://github.com/user-attachments/assets/3f9ba6c8-0998-4f6a-81b1-803191eb2aec" />
 
 ---
+> **Important Note on API Functionality**
+>
+> The Google Cloud free trial associated with the original development of this project has expired. As a result, features that rely on the Google Maps Platform (such as map loading, address search, and distance calculation) may not work in a live demo.
+>
+> To get the full functionality, you will need to run the project locally using your own Google Maps API key.
 
+---
 ### What The Project Does
 
 *   **Full User Sign-up and Login**: Users can create an account or log in. The app uses the browser's `localStorage` to remember users, so it acts like a simple database.
@@ -39,14 +45,32 @@ Here’s how the project files are organized:
 
 ### Google Maps API Integration
 
-The app’s location features are powered by three key Google Maps Platform APIs:
+### Google Maps Platform APIs Used
 
-1.  **Places API (Autocomplete)**: This is used in the pickup and dropoff input fields. It provides real-time address suggestions, which makes entering locations quick and easy.
-2.  **Maps JavaScript API**: This is what renders the interactive map itself. We use it to display the map, place markers for the start and end points, and automatically adjust the map's view to fit the route.
-3.  **Geometry Library**: This is a powerful part of the Maps API that can perform calculations. We use the `computeDistanceBetween()` function to get the straight-line distance between the two locations, which is a key part of how the fare is calculated.
+*   **Maps JavaScript API**: The main API that displays the interactive map on your website and lets you place markers for the start and end points of a ride.
+
+*   **Places API**: Provides real-time address suggestions as the user types into the location fields (Autocomplete) and gives your app access to Google's vast database of places.
+
+*   **Geocoding API**: A utility that converts a human-readable street address into precise map coordinates (latitude and longitude), which is necessary to plot locations accurately.
+
+*   **Directions API**: Calculates the optimal route between the pickup and drop-off points, providing the total travel distance and an estimated travel time.
 
 ---
+### Sample images of our website
 
+<img width="1489" height="724" alt="image" src="https://github.com/user-attachments/assets/13c1713f-0f39-4109-b927-dc806fdc349f" />
+
+<img width="1482" height="672" alt="image" src="https://github.com/user-attachments/assets/9debdb09-b200-4854-9754-3545f3d5c4f2" />
+
+<img width="1509" height="669" alt="image" src="https://github.com/user-attachments/assets/712f0b17-5d43-4b53-bc7f-1f9824c2bbdd" />
+
+<img width="1029" height="630" alt="image" src="https://github.com/user-attachments/assets/9cb21624-5b34-4cf2-9803-0eb241d8c063" />
+
+<img width="1012" height="445" alt="image" src="https://github.com/user-attachments/assets/bcc286b2-2105-47a1-8adf-43ffdc9173db" />
+
+<img width="1029" height="512" alt="image" src="https://github.com/user-attachments/assets/dd3d9a90-3dee-449c-9c30-401e7a400f6f" />
+
+---
 ### Tech Stack
 
 This project was built from the ground up without any front-end frameworks like React or Angular.
