@@ -5,7 +5,7 @@
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![Google Maps API](https://img.shields.io/badge/Google_Maps-4285F4?style=for-the-badge&logo=googlemaps&logoColor=white)
 
--Samarth Mahesh
+-Samarth Mahesh and Advaith Rajesh
 
 ---
 
@@ -103,13 +103,4 @@ To run this project on your own computer, you will need a Google Maps API Key.
     Because this is a simple front-end project, you can just open the `index.html` file in a web browser. For the best results, it's a good idea to use a local web server (like the "Live Server" extension in VS Code) to avoid any issues.
 
 
-text
-
----
-*This project was created by Advaith Rajesh, Samarth Mahesh, and Shubham Singh.*[1]
-Suggested Description and Keywords
-Here are a repository description and keywords (topics) that you can use on GitHub.
-
-Short Description
-A front-end simulation of a modern cab booking web app built with vanilla HTML, CSS, and JavaScript, featuring Google Maps API integration for interactive maps, routing, and dynamic fare calculation.
 
